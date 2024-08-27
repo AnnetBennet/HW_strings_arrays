@@ -9,7 +9,7 @@ public class StatsServiceTest {
     public void minsales() {
         StatsService service = new StatsService();
 
-        int[] minMonth = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] minMonth = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedMonth = 9;
         int actualMonth = service.minSales(minMonth);
@@ -21,7 +21,7 @@ public class StatsServiceTest {
     public void calculateSumSales() {
         StatsService service = new StatsService();
 
-        int[] sumSales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sumSales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedSum = 180;
         int actualSum = service.calculateSumSales(sumSales);
@@ -30,10 +30,10 @@ public class StatsServiceTest {
     }
 
     @Test
-    public void maxsales() {
+    public void maxSales() {
         StatsService service = new StatsService();
 
-        int[] maxMonth = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] maxMonth = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedMonth = 6;
         int actualMonth = service.maxSales(maxMonth);
@@ -45,7 +45,7 @@ public class StatsServiceTest {
     public void averageAmount() {
         StatsService service = new StatsService();
 
-        int[] averageAmount = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] averageAmount = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedAverageAmount = 15;
         int actualAverageAmount = service.averageAmount(averageAmount);
@@ -57,9 +57,9 @@ public class StatsServiceTest {
     public void belowAverageAmount() {
         StatsService service = new StatsService();
 
-        int[] counter = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] counter = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
-        int expectedCounter = 11;
+        int expectedCounter = 5;
         int actualCounter = service.belowAverageAmount(counter);
 
         Assertions.assertEquals(expectedCounter, actualCounter);
@@ -69,9 +69,9 @@ public class StatsServiceTest {
     public void aboveAverageAmount() {
         StatsService service = new StatsService();
 
-        int[] counter = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] counter = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
-        int expectedCounter = 12;
+        int expectedCounter = 5;
         int actualCounter = service.aboveAverageAmount(counter);
 
         Assertions.assertEquals(expectedCounter, actualCounter);
