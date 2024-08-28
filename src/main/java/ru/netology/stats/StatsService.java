@@ -29,15 +29,13 @@ public class StatsService {
                 maxMonth = i;
             }
         }
-
         return maxMonth + 1;
     }
 
     public int averageAmount(long[] sales) {
         int sum = calculateSumSales(sales);
-        int averageAmount = sum/12;
+        int averageAmount = sum / 12;
         return averageAmount;
-
     }
 
     public int belowAverageAmount(long[] sales) {
@@ -48,9 +46,7 @@ public class StatsService {
                 counter++;
             }
         }
-
         return counter;
-
     }
 
     public int aboveAverageAmount(long[] sales) {
@@ -62,6 +58,5 @@ public class StatsService {
             }
         }
         return counter;
-
     }
 }
